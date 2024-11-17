@@ -1,0 +1,30 @@
+{
+  "name": "flows-file-manager",
+  "version": "0.1.0",
+  "description": "A package that can manage your Node-RED flows file to easily switch from a monolith to a tree structure and forth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@node-red/flow-parser": "1.0.2",
+    "js-yaml": "^4.1.0",
+    "eol": "^0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vgo-exo/flows-file-manager"
+  },
+  "keywords": [
+    "node-red",
+    "flows",
+    "manager",
+    "forge",
+    "tree",
+    "split",
+    "yaml-json",
+    "files"
+  ],
+  "author": "vincent.gorisse@exotec.com",
+  "license": "Apache-2.0"
+}
