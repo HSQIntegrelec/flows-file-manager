@@ -1,6 +1,6 @@
 {
   "name": "flows-file-manager",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A package that can manage your Node-RED flows file to easily switch from a monolith to a tree structure and forth",
   "main": "index.js",
   "scripts": {

@@ -143,6 +143,32 @@ function reorderTabs(flowConfig, reference) {
 }
 
 
+/**
+ * Fix the "group" node by removing their 'w' and 'h' properties and reordering the nodes array.
+ * @param {object} contents 
+ * @returns contents
+ */
+function fixGroupNode(contents) {
+  contents.forEach(element => {
+    element.content.forEach(node => {
+      if (node.type && node.type === "group") {
+        if (node.w) {
+          delete node.w
+        }
+        if (node.h) {
+          delete node.h
+        }
+        if (node.nodes) {
+          node.nodes = node.nodes.sort()
+        }
+      }
+    });
+  });
+
+  return contents
+}
+
+
 
 ////////////////////////////////////////////////////////////
 //  CORE FUNCTIONS
@@ -219,6 +245,8 @@ function constructTreeObjectFromFlowSet(flowSet) {
       content: [configNode.export()]
     });
   })
+
+  contents = fixGroupNode(contents)
 
   return contents
 }
